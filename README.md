@@ -10,7 +10,9 @@ specific to these MCUs and based on direct register manipulations. Over time, Ti
 expanded with these functions.
 
 To start with:
-DAC_SetVoltage(float)
+
+DAC_SetVoltage(float)  Sets a defined voltage on the DAC pin
+
 Pin PA6 of all tinyAVR 1-series microcontrollers is the DAC output pin. The function sets the 
 output voltage on pin PA6 to the desired voltage value, with automatic internal Vref selection
 for maximum accuracy. Initial configuration is handled automatically within the function.
