@@ -54,3 +54,19 @@ void DAC_SetVoltage(float Voltage) {
 	DAC_setup();									// Runs once, check in DAC_setup
     DAC0.DATA = (uint8_t)(Voltage * 256.0f / Vreferentie);
 }
+
+void Vref_Disable(void) {
+	VREF_CTRLB &= ~VREF_DAC0REFEN_bm;
+}
+
+void DAC_Disable(void) {
+	DAC0.CTRLA &= ~DAC_OUTEN_bm;
+	DAC0.CTRLA &= ~DAC_ENABLE_bm;
+	VREF_CTRLB &= ~VREF_DAC0REFEN_bm;
+}
+
+void USART_Disable(void) {
+	USART0.CTRLB &= ~USART_TXEN_bm;   // Switch off the transmitter
+	USART0.CTRLB &= ~USART_RXEN_bm;   // Switch off the receiver
+	USART0.CTRLA &= ~USART_LBME_bm;   // Disable loopback mode
+}
