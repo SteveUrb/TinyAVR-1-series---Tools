@@ -11,7 +11,7 @@ expanded with these functions.
 
 Starting with:
 
-DAC_SetVoltage(float)
+DAC_SetVoltage(float) - 
 Sets a defined output voltage on the dedicated DAC pin PA6.
 
 Pin PA6 of all tinyAVR 1-series microcontrollers is the DAC output pin. The function sets the 
@@ -19,11 +19,11 @@ output voltage on pin PA6 to the desired voltage value, with automatic internal 
 for maximum accuracy. Initial configuration is handled automatically within the function.
 Voltage is limited between 0 and 4.34 volts with an accuracy of approximately 0.1 volt.
 
-Vref_Disable(void);
+Vref_Disable(void) - 
 Disabling the reference voltage. A power saving option.
 
-DAC_Disable(void);
+DAC_Disable(void) - 
 Disabling the DAC peripheral. A power saving option.
 
-USART_Disable(void);
+USART_Disable(void) - 
 Disabling the USART0 peripheral. A power saving option.
