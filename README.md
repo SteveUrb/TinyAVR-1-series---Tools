@@ -9,8 +9,11 @@ for these tinyAVR 1-series microcontrollers. Some are general C/C++ functions, w
 specific to these MCUs and based on direct register manipulations. Over time, TinyTools will be 
 expanded with these functions.
 
-To start with:
+Starting with:
+
 DAC_SetVoltage(float)
+Sets a defined output voltage on the dedicated DAC pin PA6.
+
 Pin PA6 of all tinyAVR 1-series microcontrollers is the DAC output pin. The function sets the 
 output voltage on pin PA6 to the desired voltage value, with automatic internal Vref selection
 for maximum accuracy. Initial configuration is handled automatically within the function.
